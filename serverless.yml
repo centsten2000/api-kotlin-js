@@ -1,0 +1,11 @@
+service: api-kotlin-js
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs10.x
+  stage: ${env:STAGE}
+
+functions:
+  hello:
+    handler: build/js/packages/aws-kotlin-nodejs-gradle/kotlin/aws-kotlin-nodejs-gradle.handler
